@@ -3,19 +3,27 @@
 
 #include <QTextEdit>
 
-class MdiChild : public QMdiSubWindow
+class MdiChild : public QTextEdit
 {
     Q_OBJECT
 
 public:
     MdiChild();
 
+    void newUser();
+    QString currentUser() { return curUser; }
+
 protected:
     void closeEvent(QCloseEvent *event);
 
-private slots:
+
 
 private:
+
+    void setCurrentUser(const QString &UserName);
+
+    QString curUser;
+
 };
 
 #endif
