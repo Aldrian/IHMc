@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\mainwindow.o
+./debug\mdichild.o
+./debug\model.o
+./debug\chatcontroller.o
+./debug\actionmessage.o
+./debug\qrc_mdi.o
+./debug\moc_mainwindow.o
+./debug\moc_mdichild.o
+./debug\moc_model.o
+);

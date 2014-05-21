@@ -1,9 +1,9 @@
 #ifndef MDICHILD_H
 #define MDICHILD_H
 
-#include <QTextEdit>
+#include <QTWidgets>
 
-class MdiChild : public QTextEdit
+class MdiChild : public QWidget
 {
     Q_OBJECT
 
@@ -11,14 +11,23 @@ public:
     MdiChild();
 
     void newUser();
-    QString currentUser() { return curUser; }
+    QString currentUser() {return curUser;}
+
+    QLabel* getLabel() {return label;}
+    QLineEdit* getText() {return text;}
+    QPushButton* getButton() {return send;}
 
 protected:
+
     void closeEvent(QCloseEvent *event);
 
 
 
 private:
+
+    QLabel *label;
+    QLineEdit *text;
+    QPushButton *send;
 
     void setCurrentUser(const QString &UserName);
 

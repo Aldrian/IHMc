@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\mdichild.o
+./release\model.o
+./release\chatcontroller.o
+./release\actionmessage.o
+./release\qrc_mdi.o
+./release\moc_mainwindow.o
+./release\moc_mdichild.o
+./release\moc_model.o
+);

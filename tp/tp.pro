@@ -1,11 +1,17 @@
 QT += widgets
 
 HEADERS       = mainwindow.h \
-                mdichild.h
+                mdichild.h \
+    model.h \
+    chatcontroller.h \
+    actionmessage.h
 
 SOURCES       = main.cpp \
                 mainwindow.cpp \
-                mdichild.cpp
+                mdichild.cpp \
+    model.cpp \
+    chatcontroller.cpp \
+    actionmessage.cpp
 RESOURCES     = mdi.qrc
 
 # install

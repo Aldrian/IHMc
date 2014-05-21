@@ -54,14 +54,7 @@ void MainWindow::about()
                "document interface applications using Qt."));
 }
 
-void MainWindow::updateMenus()
-{
-
-
-
-
-
-}
+void MainWindow::updateMenus(){}
 
 void MainWindow::updateWindowMenu()
 {
@@ -86,9 +79,6 @@ MdiChild *MainWindow::createMdiChild()
 {
     MdiChild *child = new MdiChild;
     mdiArea->addSubWindow(child);
-
-
-
     return child;
 }
 
@@ -100,12 +90,10 @@ void MainWindow::createActions()
     connect(newAct, SIGNAL(triggered()), this, SLOT(newUser()));
 
 
-
     exitAct = new QAction(tr("E&xit"), this);
     exitAct->setShortcuts(QKeySequence::Quit);
     exitAct->setStatusTip(tr("Exit the application"));
     connect(exitAct, SIGNAL(triggered()), qApp, SLOT(closeAllWindows()));
-
 
 
     closeAct = new QAction(tr("Cl&ose"), this);
@@ -160,9 +148,6 @@ void MainWindow::createMenus()
     connect(action, SIGNAL(triggered()), this, SLOT(switchLayoutDirection()));
     UserMenu->addAction(exitAct);
 
-
-
-
     windowMenu = menuBar()->addMenu(tr("&Window"));
     updateWindowMenu();
     connect(windowMenu, SIGNAL(aboutToShow()), this, SLOT(updateWindowMenu()));
@@ -178,7 +163,6 @@ void MainWindow::createToolBars()
 {
     UserToolBar = addToolBar(tr("User"));
     UserToolBar->addAction(newAct);
-
 }
 
 void MainWindow::createStatusBar()
