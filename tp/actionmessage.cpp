@@ -3,8 +3,8 @@
 ActionMessage::ActionMessage(Model *m) : message(m) {}
 
 
-void ActionMessage::sendMessage(QString message)
+void ActionMessage::sendMessage(QString message, QString from)
 {
-   this->message->setMessage(message);
+   this->message->SetMessage(message, from);
 }
 

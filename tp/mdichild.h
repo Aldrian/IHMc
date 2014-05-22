@@ -29,7 +29,7 @@ private:
     QLineEdit *text;
     QPushButton *send;
 
-    void setCurrentUser(const QString &UserName);
+    void setCurrentUser(QString UserName);
 
     QString curUser;
 

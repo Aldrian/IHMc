@@ -2,7 +2,7 @@
 
 #include "mainwindow.h"
 #include "mdichild.h"
-
+#include "chatcontroller.h"
 MainWindow::MainWindow()
 {
     mdiArea = new QMdiArea;
@@ -77,8 +77,9 @@ void MainWindow::updateWindowMenu()
 
 MdiChild *MainWindow::createMdiChild()
 {
-    MdiChild *child = new MdiChild;
+    MdiChild *child = new MdiChild();
     mdiArea->addSubWindow(child);
+    ChatController* c = new ChatController(&lastMessage, child);
     return child;
 }
 

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "model.h"
 
 class MdiChild;
 class QAction;
@@ -19,11 +20,9 @@ public:
 
 protected:
     void closeEvent(QCloseEvent *event);
-
+    Model lastMessage;
 private slots:
     void newUser();
-
-
     void about();
     void updateMenus();
     void updateWindowMenu();

@@ -8,7 +8,7 @@ class ActionMessage:public QObject
 public:
     ActionMessage(Model *m);
 public slots :
-     void sendMessage(QString message);
+     void sendMessage(QString message, QString from);
 private :
     Model *message;
 };

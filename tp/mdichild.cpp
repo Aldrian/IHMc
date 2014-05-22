@@ -1,6 +1,7 @@
 #include <QtWidgets>
 
 #include "mdichild.h"
+#include "model.h"
 
 MdiChild::MdiChild()
 {
@@ -20,14 +21,19 @@ MdiChild::MdiChild()
 
    setAttribute(Qt::WA_DeleteOnClose);
 }
+void MdiChild::setCurrentUser(QString UserName)
+{
+   this->curUser=UserName;
+}
 
 void MdiChild::newUser()
 {
     bool ok;
     QString Username = QInputDialog::getText(this, tr("Username select"),
                                            tr("Please type your username:"), QLineEdit::Normal,
-                                           QDir::home().dirName(), &ok);
+                                        QDir::home().dirName(), &ok);
     setWindowTitle(Username);
+    setCurrentUser(Username);
 }
 
 
