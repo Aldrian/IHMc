@@ -22,12 +22,15 @@ void ChatController::RecieveMessage(QString message, QString from)
     QString texte;
     texte = chat->getLabel()->text();
     chat -> getLabel();
+
+
     texte += "\n";
-    texte += "<b>";
     texte += from;
-    texte += "</b>";
     texte +=" : ";
+
+
     texte += message;
+
     chat->getLabel()->setText(texte);
 }
 
